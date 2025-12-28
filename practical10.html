@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Div and Span Layout Example</title>
+  <style>
+    /* Styling for layout blocks */
+    .header {
+      background-color: #0077cc;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .nav {
+      background-color: #f0f0f0;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #0077cc;
+    }
+
+    .content {
+      display: flex;
+      margin: 20px;
+    }
+
+    .sidebar {
+      width: 25%;
+      background-color: #e9f7ff;
+      padding: 15px;
+      border: 2px solid #0077cc;
+    }
+
+    .main {
+      width: 75%;
+      padding: 15px;
+      border: 2px solid #333;
+      margin-left: 10px;
+    }
+
+    .footer {
+      background-color: #0077cc;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    /* Styling for span */
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <h1>My Webpage Layout with Div & Span</h1>
+  </div>
+
+  <!-- Navigation -->
+  <div class="nav">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <!-- Content Area -->
+  <div class="content">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Sidebar</h2>
+      <p>Links and extra info go here.</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+      <h2>Main Content</h2>
+      <p>This is the main area of the page. Notice how we use 
+         <span class="highlight">span</span> to highlight text inline.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>@copyrightbhaskar</p>
+  </div>
+</body>
+</html>
