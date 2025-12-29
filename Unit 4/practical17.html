@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Events</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h2 id="heading">Interact with me!</h2>
+
+<button id="btn">Toggle Highlight</button>
+
+<p id="msg"></p>
+
+<script>
+var heading = document.getElementById("heading");
+var btn = document.getElementById("btn");
+
+function toggleHighlight() {
+    heading.classList.toggle("highlight");
+}
+
+function mouseEvent() {
+    document.getElementById("msg").innerHTML = "Mouse Clicked!";
+}
+
+function keyEvent() {
+    document.getElementById("msg").innerHTML = "Key Pressed!";
+}
+
+btn.addEventListener("click", toggleHighlight);
+btn.addEventListener("click", mouseEvent);
+document.addEventListener("keydown", keyEvent);
+
+setTimeout(function() {
+    btn.removeEventListener("click", mouseEvent);
+    document.removeEventListener("keydown", keyEvent);
+    document.getElementById("msg").innerHTML = "Mouse and Keyboard Events Removed";
+}, 5000);
+</script>
+
+</body>
+</html>
